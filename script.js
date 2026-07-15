@@ -15,14 +15,14 @@ let currentIndex = 0;
 
 
 for(let i = 0; i < holidayImages.length; i++){
-    galleryHTML += `<button onclick='openImage("${holidayImages[i]}", ${i})' aria-label="Open ${holidayImages[i]}"><img src="./img/${holidayImages[i]}" alt="${holidayImages[i]}"</button>`;
+    galleryHTML += `<button onclick='openImage("${holidayImages[i]}", ${i})' aria-label="Open ${holidayImages[i]}"><img src="./assets/img/${holidayImages[i]}" alt="${holidayImages[i]}"</button>`;
 }
 
 document.getElementById('gallery-grid').innerHTML = galleryHTML;
 
 
 function openImage(imageName, index) {
-    dialogImageElem.src = `./img/${imageName}`;
+    dialogImageElem.src = `./assets/img/${imageName}`;
     currentIndex = index;
     dialogImageElem.alt = imageName;
     document.getElementById("counter").innerText = `${currentIndex + 1}/${holidayImages.length}`;
@@ -37,7 +37,7 @@ function showNextImage() {
         currentIndex = 0;
     }
     dialogImageElem.alt = holidayImages[currentIndex];
-    dialogImageElem.src = `./img/${holidayImages[currentIndex]}`;
+    dialogImageElem.src = `./assets/img/${holidayImages[currentIndex]}`;
     document.getElementById("counter").innerText = `${currentIndex + 1}/${holidayImages.length}`;
     document.getElementById("dialogTitle").innerText = holidayImages[currentIndex];
 }
@@ -49,7 +49,7 @@ function showPreviousImage() {
         currentIndex = holidayImages.length - 1;
     }
     dialogImageElem.alt = holidayImages[currentIndex];
-    dialogImageElem.src = `./img/${holidayImages[currentIndex]}`;
+    dialogImageElem.src = `./assets/img/${holidayImages[currentIndex]}`;
     document.getElementById("counter").innerText = `${currentIndex + 1}/${holidayImages.length}`;
     document.getElementById("dialogTitle").innerText = holidayImages[currentIndex];
 }
