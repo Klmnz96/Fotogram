@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <img src="./img/logo.png" alt="Fotogram Logo">
+        <p>Fotogram</p>
+    </header>
+
+    <main id="images-gallery" class="container">
+        <h1>Your personal photo album</h1>
+        <div id="gallery-grid"></div>
+    </main>
+
+    <dialog id="imagePreview" onclick="handleDialogClick(event)">
+
+        <div class="dialog-header">
+            <h2 id="dialogTitle"></h2>
+            <button onclick="closeDialog()" id="closeDialog" aria-label="Close dialog"><img src="./icons/close.png" alt="close"></button>
+        </div>
+
+        <img id="dialogImage" src="">
+
+        <div class="dialog-nav">
+            <button id="arrowLeft" aria-label="Previous image" onclick="showPreviousImage()"><img src="./icons/arrow.png" alt="arrow-left"></button>
+            <span id="counter"></span>
+            <button id="arrowRight" aria-label="Next image" onclick="showNextImage()"><img src="./icons/arrow.png" alt="arrow-right"></button>
+        </div>
+
+    </dialog>
+
+    <footer class="container">
+        <img src="./img/da-logo.png" alt="Developer Akademie Logo">
+        <p class="copyright-text">&copy; 2026 Developer Akademie GmbH</p>
+        <p class="author-name">Code: Fabian Klemenz</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
